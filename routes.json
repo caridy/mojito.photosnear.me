@@ -1,0 +1,31 @@
+[{
+    "settings": [ "master" ],
+
+    "root": {
+        "path": "/",
+        "method": ["get"],
+        "call": "frame.index"
+    },
+
+    "places": {
+        "path": "/places/:place/",
+        "method": ["get"],
+        "call": "frame.index"
+    },
+
+    "photos": {
+        "path": "/photos/:photo/",
+        "method": ["get"],
+        "call": "frame.index"
+    },
+
+    "place": {
+        "//": "Catch-all route to dynamically figure out the place based on text.",
+        "//": "**Note:** This needs to be the last route.",
+
+        "path": "/:placeText",
+        "method": ["get"],
+        "call": "frame.index"
+    }
+
+}]

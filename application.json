@@ -1,0 +1,70 @@
+[
+    {
+        "settings": [ "master" ],
+        "specs": {
+            "frame": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "deploy": true,
+                    "child" : {
+                        "base": "app"
+                    }
+                }
+            },
+            "app": {
+                "type": "page",
+                "config": {
+                    "children": {
+                        "lightbox": {
+                            "type": "lightbox"
+                        },
+                        "grid": {
+                            "type": "grid"
+                        }
+                    }
+                }
+            }
+        },
+        "flickr": {
+            "api_key": "0984607e2222db7a1be6a5692741ca08"
+        },
+        "staticHandling": {
+            "appName": "pnm"
+        },
+        "metas": [
+            {
+                "name": "description",
+                "content": "Look at interesting photos of things taken near your current location"
+            },
+            {
+                "name": "author",
+                "content": "Eric Ferraiuolo, Caridy Patino"
+            },
+            {
+                "name": "viewport",
+                "content": "width=device-width, initial-scale=1.0"
+            },
+            {
+                "name": "apple-mobile-web-app-capable",
+                "content": "yes"
+            },
+            {
+                "name": "format-detection",
+                "content": "telephone=no"
+            }
+        ]
+    },
+    {
+        "settings": [ "environment:development" ],
+        "staticHandling": {
+            "forceUpdate": true,
+            "cache": false
+        },
+        "yui": {
+            "config": {
+                "combine": false,
+                "filter": "debug"
+            }
+        }
+    }
+]
